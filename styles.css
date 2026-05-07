@@ -1473,11 +1473,11 @@ body {
     max-height: 90vh;
     object-fit: contain;
     border-radius: 15px;
-    box-shadow: 
-        0 0 100px rgba(255, 215, 0, 0.4),
-        0 0 200px rgba(218, 165, 32, 0.3),
+   box-shadow: 
+        0 0 60px rgba(125, 46, 46, 0.3),
+        0 0 120px rgba(125, 46, 46, 0.2),
         0 20px 60px rgba(0, 0, 0, 0.8);
-    border: 3px solid rgba(255, 215, 0, 0.5);
+    border: 3px solid rgba(125, 46, 46, 0.4);
 }
 
 /* Close Button */
@@ -1487,24 +1487,24 @@ body {
     right: 0;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, rgba(218, 165, 32, 0.9), rgba(255, 215, 0, 0.9));
-    border: 2px solid rgba(255, 215, 0, 0.8);
+    background: linear-gradient(135deg, rgba(125, 46, 46, 0.9), rgba(160, 82, 77, 0.9));
+    border: 2px solid rgba(125, 46, 46, 0.8);
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    color: #1a0f0a;
+    color: #ffffff;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 20px rgba(125, 46, 46, 0.5);
 }
 
 .lightbox-close:hover {
     transform: rotate(90deg) scale(1.1);
-    background: linear-gradient(135deg, rgba(255, 215, 0, 1), rgba(255, 192, 203, 0.9));
-    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+    background: linear-gradient(135deg, rgba(125, 46, 46, 1), rgba(201, 168, 138, 0.9));
+    box-shadow: 0 0 40px rgba(125, 46, 46, 0.8);
 }
 
 /* Navigation Arrows */
@@ -1515,18 +1515,18 @@ body {
     transform: translateY(-50%);
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, rgba(218, 165, 32, 0.9), rgba(255, 215, 0, 0.9));
-    border: 2px solid rgba(255, 215, 0, 0.8);
+    background: linear-gradient(135deg, rgba(125, 46, 46, 0.9), rgba(160, 82, 77, 0.9));
+    border: 2px solid rgba(125, 46, 46, 0.8);
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    color: #1a0f0a;
+    color: #ffffff;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 20px rgba(125, 46, 46, 0.5);
     z-index: 10001;
 }
 
@@ -1541,8 +1541,8 @@ body {
 .lightbox-prev:hover,
 .lightbox-next:hover {
     transform: translateY(-50%) scale(1.15);
-    background: linear-gradient(135deg, rgba(255, 215, 0, 1), rgba(255, 192, 203, 0.9));
-    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+     background: linear-gradient(135deg, rgba(125, 46, 46, 1), rgba(201, 168, 138, 0.9));
+    box-shadow: 0 0 40px rgba(125, 46, 46, 0.8);
 }
 
 .lightbox-prev:active,
