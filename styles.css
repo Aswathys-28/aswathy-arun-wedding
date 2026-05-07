@@ -970,81 +970,152 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        background-position: center 25%;
-    }
-    
-    .hero-image {
-        height: 50vh;
-    }
-    
-    .hero-image::after {
-        width: 100%;
-        height: 80px;
-        top: auto;
-        bottom: 0;
-        background: linear-gradient(to bottom, transparent, #fef9f3);
-    }
-    
+/* Responsive Design */
+@media (max-width: 1200px) {
     .hero-content {
-        padding: 40px 20px;
+        padding: 40px;
     }
     
     .names {
-        font-size: 4rem;
+        font-size: 5rem;
     }
     
-    .save-the-date {
-        font-size: 1.6rem;
-        letter-spacing: 8px;
-    }
-    
-    .date {
-        font-size: 2rem;
-        letter-spacing: 8px;
-    }
-    
-    .day {
-        font-size: 1.2rem;
-    }
-    
-    .invitation-text {
-        font-size: 1.6rem;
-        line-height: 1.7;
-    }
-    
-    .gallery-title {
-        font-size: 3rem;
+    .bride-groom-container {
+        gap: 30px;
     }
     
     .photo-item {
         width: 240px;
         height: 350px;
     }
+}
+
+@media (max-width: 968px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .hero-image {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .hero-content {
+        padding: 40px 20px;
+        flex: none;
+    }
+    
+    .names {
+        font-size: 4rem;
+        margin-bottom: 30px;
+    }
+    
+    .save-the-date {
+        font-size: 1.4rem;
+        letter-spacing: 4px;
+        margin-bottom: 30px;
+    }
+    
+    .date {
+        font-size: 1.8rem;
+        letter-spacing: 6px;
+    }
+    
+    .day {
+        font-size: 1.1rem;
+        letter-spacing: 4px;
+    }
+    
+    .bride-groom-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 600px;
+    }
+    
+    .bride-groom-name {
+        font-size: 2.5rem;
+    }
+    
+    .venue-title {
+        font-size: 2rem;
+    }
+    
+    .venue-name {
+        font-size: 1.6rem;
+    }
+    
+    .gallery-title {
+        font-size: 2.8rem;
+        margin-bottom: 40px;
+    }
+    
+    .photo-item {
+        width: 220px;
+        height: 320px;
+    }
     
     .carousel-row {
         gap: 20px;
     }
     
-    .footer-names {
-        font-size: 2.5rem;
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .invitation-text {
+        font-size: 1.6rem;
+        line-height: 1.6;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 30px 15px;
+    }
+    
+    .names {
+        font-size: 3.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .save-the-date {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+    
+    .date {
+        font-size: 1.6rem;
+        letter-spacing: 4px;
+    }
+    
+    .day {
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+    
+    .invitation-section {
+        padding: 30px 15px;
+    }
+    
+    .invitation-text {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    
     .bride-groom-section {
-        padding: 60px 15px;
+        padding: 30px 15px;
     }
     
     .bride-card,
     .groom-card {
-        padding: 40px 25px;
+        padding: 25px 20px;
     }
     
     .bride-groom-name {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .parents-names {
@@ -1056,146 +1127,327 @@ body {
     }
     
     .venue-section {
-        padding: 40px 15px;
+        padding: 25px 15px;
     }
     
     .venue-title {
         font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-    
-    .venue-cards {
-        gap: 20px;
+        margin-bottom: 20px;
     }
     
     .venue-card {
-        padding: 20px 20px;
-    }
-    
-    .venue-type {
-        font-size: 0.75rem;
-        letter-spacing: 3px;
-        margin-bottom: 10px;
+        padding: 20px 15px;
     }
     
     .venue-name {
         font-size: 1.4rem;
-        margin-bottom: 12px;
     }
     
     .venue-time {
-        font-size: 0.85rem;
-        margin-bottom: 15px;
+        font-size: 0.9rem;
     }
     
     .venue-address {
-        font-size: 0.8rem;
-        margin-bottom: 15px;
-    }
-    
-    .venue-map-btn {
-        padding: 8px 22px;
-        font-size: 0.75rem;
-    }
-    
-    .followed-by {
-        font-size: 1.1rem;
-        margin: 20px 0 15px;
+        font-size: 0.85rem;
     }
     
     .reception-section {
-        padding: 40px 15px;
+        padding: 25px 15px;
     }
     
     .reception-intro {
-        font-size: 1.2rem;
-        margin-bottom: 25px;
-    }
-    
-    .reception-card {
-        padding: 25px 20px;
-    }
-    
-    .reception-name {
-        font-size: 1.5rem;
-    }
-    
-    .reception-address {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .names {
-        font-size: 4rem;
-    }
-    
-    .date {
-        font-size: 2rem;
-        letter-spacing: 8px;
-    }
-    
-    .day {
         font-size: 1.3rem;
     }
     
-    .gallery-title {
-        font-size: 3rem;
-    }
-    
-    .photo-item {
-        width: 300px;
-        height: 420px;
-    }
-    
-    .carousel-row {
-        gap: 20px;
-    }
-    
-    .footer-names {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .names {
-        font-size: 3rem;
-    }
-    
-    .hero-content::before {
-        font-size: 2.5rem;
-        top: -60px;
-    }
-    
-    .date {
+    .reception-name {
         font-size: 1.6rem;
-        letter-spacing: 6px;
-    }
-    
-    .day {
-        font-size: 1.1rem;
-        letter-spacing: 5px;
     }
     
     .gallery {
-        padding: 60px 10px;
+        padding: 40px 15px;
     }
     
     .gallery-title {
         font-size: 2.5rem;
+        margin-bottom: 30px;
     }
     
     .photo-item {
-        width: 260px;
-        height: 380px;
+        width: 200px;
+        height: 290px;
     }
     
     .carousel-row {
         gap: 15px;
     }
     
-    .footer-names {
+    .video-section {
+        padding: 30px 15px;
+    }
+    
+    .video-grid {
+        gap: 25px;
+    }
+    
+    .footer {
+        padding: 30px 15px;
+    }
+    
+    .footer-text {
+        font-size: 1.4rem;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .hero-content {
+        padding: 25px 15px;
+    }
+    
+    .names {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    
+    .save-the-date {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+    
+    .date {
+        font-size: 1.4rem;
+        letter-spacing: 3px;
+    }
+    
+    .day {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    
+    .date-container {
+        padding: 20px;
+    }
+    
+    .invitation-section {
+        padding: 25px 10px;
+    }
+    
+    .invitation-text {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+    
+    .bride-groom-section {
+        padding: 25px 10px;
+    }
+    
+    .bride-card,
+    .groom-card {
+        padding: 20px 15px;
+    }
+    
+    .bride-groom-name {
+        font-size: 1.8rem;
+    }
+    
+    .parents-names {
+        font-size: 1.1rem;
+    }
+    
+    .address {
+        font-size: 0.85rem;
+    }
+    
+    .venue-section {
+        padding: 20px 10px;
+    }
+    
+    .venue-title {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    
+    .venue-card {
+        padding: 15px 12px;
+    }
+    
+    .venue-name {
+        font-size: 1.2rem;
+    }
+    
+    .venue-time {
+        font-size: 0.8rem;
+    }
+    
+    .venue-address {
+        font-size: 0.8rem;
+    }
+    
+    .venue-map-btn {
+        padding: 8px 20px;
+        font-size: 0.7rem;
+    }
+    
+    .reception-section {
+        padding: 20px 10px;
+    }
+    
+    .reception-intro {
+        font-size: 1.1rem;
+    }
+    
+    .reception-name {
+        font-size: 1.4rem;
+    }
+    
+    .reception-address {
+        font-size: 0.85rem;
+    }
+    
+    .gallery {
+        padding: 30px 10px;
+    }
+    
+    .gallery-title {
         font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    
+    .photo-item {
+        width: 180px;
+        height: 260px;
+        border-radius: 15px;
+    }
+    
+    .photo-item img {
+        border-radius: 15px;
+    }
+    
+    .carousel-row {
+        gap: 12px;
+    }
+    
+    .video-section {
+        padding: 25px 10px;
+    }
+    
+    .video-grid {
+        gap: 20px;
+    }
+    
+    .video-item-large {
+        border-radius: 15px;
+        aspect-ratio: 16/10;
+    }
+    
+    .play-button-large {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .footer {
+        padding: 25px 10px;
+    }
+    
+    .footer-text {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    
+    /* Mobile Lightbox Adjustments */
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 80vh;
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .lightbox-prev,
+    .lightbox-next {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+    
+    .lightbox-prev {
+        left: 10px;
+    }
+    
+    .lightbox-next {
+        right: 10px;
+    }
+    
+    .lightbox-counter {
+        bottom: 10px;
+        font-size: 1rem;
+        padding: 8px 20px;
+        letter-spacing: 2px;
+    }
+    
+    /* Music Player Mobile */
+    .music-player {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .music-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .music-icon {
+        font-size: 1.4rem;
+    }
+}
+
+/* Extra Small Phones */
+@media (max-width: 360px) {
+    .names {
+        font-size: 2.4rem;
+    }
+    
+    .photo-item {
+        width: 160px;
+        height: 230px;
+    }
+    
+    .carousel-row {
+        gap: 10px;
+    }
+    
+    .invitation-text {
+        font-size: 1.1rem;
+    }
+    
+    .bride-groom-name {
+        font-size: 1.6rem;
+    }
+    
+    .venue-name {
+        font-size: 1.1rem;
+    }
+    
+    .gallery-title {
+        font-size: 1.8rem;
+    }
+    
+    .footer-text {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
     }
 }
 
@@ -1473,7 +1725,7 @@ body {
     max-height: 90vh;
     object-fit: contain;
     border-radius: 15px;
-   box-shadow: 
+    box-shadow: 
         0 0 60px rgba(125, 46, 46, 0.3),
         0 0 120px rgba(125, 46, 46, 0.2),
         0 20px 60px rgba(0, 0, 0, 0.8);
@@ -1541,7 +1793,7 @@ body {
 .lightbox-prev:hover,
 .lightbox-next:hover {
     transform: translateY(-50%) scale(1.15);
-     background: linear-gradient(135deg, rgba(125, 46, 46, 1), rgba(201, 168, 138, 0.9));
+    background: linear-gradient(135deg, rgba(125, 46, 46, 1), rgba(201, 168, 138, 0.9));
     box-shadow: 0 0 40px rgba(125, 46, 46, 0.8);
 }
 
@@ -1558,12 +1810,12 @@ body {
     transform: translateX(-50%);
     font-family: 'Cinzel', serif;
     font-size: 1.2rem;
-    color: #ffd700;
+    color: #c9a88a;
     background: rgba(42, 24, 16, 0.9);
     padding: 12px 30px;
     border-radius: 30px;
-    border: 2px solid rgba(255, 215, 0, 0.5);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    border: 2px solid rgba(125, 46, 46, 0.5);
+    box-shadow: 0 0 20px rgba(125, 46, 46, 0.3);
     letter-spacing: 3px;
 }
 
