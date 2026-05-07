@@ -715,19 +715,11 @@ body {
 }
 
 .carousel-row-1 {
-    animation: scrollLeft 40s linear infinite;
+    animation: scrollLeft 60s linear infinite;
 }
 
 .carousel-row-2 {
-    animation: scrollRight 45s linear infinite;
-}
-
-.carousel-row-3 {
-    animation: scrollLeft 50s linear infinite;
-}
-
-.carousel-row-4 {
-    animation: scrollRight 42s linear infinite;
+    animation: scrollRight 65s linear infinite;
 }
 
 @keyframes scrollLeft {
@@ -735,13 +727,13 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
 @keyframes scrollRight {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
     100% {
         transform: translateX(0);
