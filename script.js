@@ -280,12 +280,21 @@ document.addEventListener('touchstart', function(e) {
 });
 
 document.addEventListener('touchmove', function(e) {
-    e.preventDefault(); // Prevent scrolling while touching
-    for (let i = 0; i < e.touches.length; i++) {
-        const touch = e.touches[i];
-        createCursorTrail(touch.pageX, touch.pageY, 'touch');
+    // Only prevent default if touching interactive elements, not the whole page
+    const target = e.target;
+    const isInteractive = target.tagName === 'VIDEO' || 
+                         target.closest('.photo-item') || 
+                         target.closest('.video-item-large') ||
+                         target.closest('.music-btn');
+    
+    if (isInteractive) {
+        // Allow normal scrolling, only create trail effect
+        for (let i = 0; i < e.touches.length; i++) {
+            const touch = e.touches[i];
+            createCursorTrail(touch.pageX, touch.pageY, 'touch');
+        }
     }
-}, { passive: false });
+}, { passive: true });
 
 document.addEventListener('click', function(e) {
     createCursorTrail(e.pageX, e.pageY, 'click');
