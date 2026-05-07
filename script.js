@@ -267,18 +267,53 @@ function changeImage(direction) {
     }, 150);
 }
 
-// Add a subtle cursor effect (optional enhancement)
+// Add a subtle cursor effect for both mouse and touch
 document.addEventListener('mousemove', function(e) {
+    createCursorTrail(e.pageX, e.pageY, 'mouse');
+});
+
+document.addEventListener('touchstart', function(e) {
+    for (let i = 0; i < e.touches.length; i++) {
+        const touch = e.touches[i];
+        createCursorTrail(touch.pageX, touch.pageY, 'touch');
+    }
+});
+
+document.addEventListener('touchmove', function(e) {
+    e.preventDefault(); // Prevent scrolling while touching
+    for (let i = 0; i < e.touches.length; i++) {
+        const touch = e.touches[i];
+        createCursorTrail(touch.pageX, touch.pageY, 'touch');
+    }
+}, { passive: false });
+
+document.addEventListener('click', function(e) {
+    createCursorTrail(e.pageX, e.pageY, 'click');
+});
+
+function createCursorTrail(x, y, type) {
     const cursor = document.createElement('div');
     cursor.className = 'cursor-trail';
-    cursor.style.left = e.pageX + 'px';
-    cursor.style.top = e.pageY + 'px';
+    
+    // Add different classes based on interaction type
+    if (type === 'touch') {
+        cursor.classList.add('touch');
+    } else if (type === 'click') {
+        cursor.classList.add('large');
+    }
+    
+    cursor.style.left = x + 'px';
+    cursor.style.top = y + 'px';
     document.body.appendChild(cursor);
     
+    // Remove the element after animation
+    const animationDuration = type === 'touch' ? 1500 : 1200;
     setTimeout(() => {
-        cursor.remove();
-    }, 1000);
-});
+        if (cursor.parentNode) {
+            cursor.remove();
+        }
+    }, animationDuration);
+}
 
 // Prevent right-click on images (optional protection)
 document.addEventListener('contextmenu', function(e) {
