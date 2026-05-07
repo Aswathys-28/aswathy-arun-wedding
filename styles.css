@@ -1218,10 +1218,18 @@ body {
     
     .video-section {
         padding: 30px 15px;
+        overflow: visible;
+        -webkit-overflow-scrolling: touch;
     }
     
     .video-grid {
         gap: 25px;
+        overflow: visible;
+    }
+    
+    .video-item-large {
+        touch-action: manipulation;
+        -webkit-touch-callout: none;
     }
     
     .footer {
@@ -1491,11 +1499,14 @@ body {
     padding: 60px 20px;
     background: #faf8f6;
     text-align: center;
+    overflow: visible;
+    width: 100%;
 }
 
 .video-container {
     max-width: 1000px;
     margin: 0 auto;
+    overflow: visible;
 }
 
 .video-title {
@@ -1529,6 +1540,7 @@ body {
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: visible;
 }
 
 .video-item-large {
