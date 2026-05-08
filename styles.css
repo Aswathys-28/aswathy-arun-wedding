@@ -765,19 +765,19 @@ body {
 
 @keyframes floatLeftToRight {
     0% {
-        transform: translateX(100vw);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
 @keyframes floatRightToLeft {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
     100% {
-        transform: translateX(100vw);
+        transform: translateX(0);
     }
 }
 
