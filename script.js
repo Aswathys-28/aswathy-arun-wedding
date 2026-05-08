@@ -75,16 +75,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create lightbox HTML
     createLightbox();
     
-    // Get all gallery images and videos
-    const photoItems = document.querySelectorAll('.photo-item img');
+    // Get all gallery images and videos - only original photos for lightbox
+    const originalPhotoItems = document.querySelectorAll('.original-photo img');
+    const allPhotoItems = document.querySelectorAll('.photo-item img'); // All photos for hover effects
     const videoItems = document.querySelectorAll('.video-item video, .video-item-large video');
     
-    allImages = Array.from(photoItems);
+    allImages = Array.from(originalPhotoItems); // Only original 19 photos for lightbox
     
-    // Add click event to each image
-    photoItems.forEach((img, index) => {
+    // Add click event to each image (both original and duplicate)
+    allPhotoItems.forEach((img) => {
         img.addEventListener('click', function() {
-            openLightbox(index);
+            // Find the index in the original photos array
+            const imgSrc = this.src;
+            const originalIndex = allImages.findIndex(originalImg => originalImg.src === imgSrc);
+            if (originalIndex !== -1) {
+                openLightbox(originalIndex);
+            }
         });
         img.style.cursor = 'pointer';
     });
